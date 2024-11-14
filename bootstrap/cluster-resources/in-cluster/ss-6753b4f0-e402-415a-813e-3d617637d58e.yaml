@@ -1,0 +1,23 @@
+apiVersion: external-secrets.io/v1beta1
+kind: SecretStore
+metadata:
+  annotations:
+    h4-poc.github.io/created-at: "2024-11-14T22:41:10+08:00"
+    h4-poc.github.io/id: 6753b4f0-e402-415a-813e-3d617637d58e
+    h4-poc.github.io/last-synced: "2024-11-14T22:41:10+08:00"
+    h4-poc.github.io/updated-at: "2024-11-14T22:41:10+08:00"
+  creationTimestamp: null
+  name: vault-backend
+  namespace: default
+spec:
+  provider:
+    vault:
+      auth:
+        tokenSecretRef:
+          key: token
+          name: vault-token
+      path: secret
+      server: http://vault.default:8200
+      tls: {}
+      version: v2
+status: {}
