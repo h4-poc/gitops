@@ -6,7 +6,7 @@ metadata:
     h4-poc.github.io/description: test-app-template-description
     h4-poc.github.io/id: e23dedb1-1ec8-4343-98f8-82b980e1358e
     h4-poc.github.io/owner: team-a
-    h4-poc.github.io/updated-at: "2024-11-14T21:44:05+08:00"
+    h4-poc.github.io/updated-at: "2024-11-14T21:48:58+08:00"
   creationTimestamp: null
   name: test-app-test
   namespace: argocd
