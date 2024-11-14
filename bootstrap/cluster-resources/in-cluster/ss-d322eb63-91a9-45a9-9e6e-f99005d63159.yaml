@@ -5,7 +5,7 @@ metadata:
     h4-poc.github.io/created-at: "2024-11-14T22:36:55+08:00"
     h4-poc.github.io/id: d322eb63-91a9-45a9-9e6e-f99005d63159
     h4-poc.github.io/last-synced: "2024-11-14T22:36:55+08:00"
-    h4-poc.github.io/updated-at: "2024-11-14T22:36:55+08:00"
+    h4-poc.github.io/updated-at: "2024-11-14T22:46:17+08:00"
   creationTimestamp: null
   name: vault-backend
   namespace: default
@@ -13,10 +13,13 @@ spec:
   provider:
     vault:
       auth:
-        tokenSecretRef:
-          key: token
-          name: vault-token
-      path: secret
+        kubernetes:
+          mountPath: kubernetes
+          role: my-app-role
+          serviceAccountRef:
+            name: my-service-account
+            namespace: default
+      path: secret/data/new-path
       server: http://vault.default:8200
       tls: {}
       version: v2
