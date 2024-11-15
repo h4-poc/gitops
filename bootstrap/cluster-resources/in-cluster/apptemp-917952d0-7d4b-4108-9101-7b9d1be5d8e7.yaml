@@ -1,0 +1,34 @@
+apiVersion: argocd-addon.github.com/v1alpha1
+kind: ApplicationTemplate
+metadata:
+  annotations:
+    h4-poc.github.io/created-at: "2024-11-15T13:49:52+08:00"
+    h4-poc.github.io/description: test-app-template-description
+    h4-poc.github.io/id: 917952d0-7d4b-4108-9101-7b9d1be5d8e7
+    h4-poc.github.io/owner: team-a
+    h4-poc.github.io/updated-at: "2024-11-15T13:49:52+08:00"
+  creationTimestamp: null
+  name: test-app-test1
+  namespace: argocd
+spec:
+  helm:
+    chart: test-app-test1
+    renderTargets:
+    - destinationCluster:
+        matchLabels:
+          env: team-a
+        name: team-a
+      valuesPath: /apps/test-app
+    repository: https://github.com/example/mytest-app.git
+    version: v1
+  kustomize:
+    renderTargets:
+    - destinationCluster:
+        matchLabels:
+          env: team-a
+        name: team-a
+      path: /apps/test-app
+  name: test-app-test1
+  repoURL: https://github.com/example/mytest-app.git
+  targetRevision: main
+status: {}
