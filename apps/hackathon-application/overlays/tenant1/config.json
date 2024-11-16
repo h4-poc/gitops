@@ -1,0 +1,17 @@
+{
+  "appName": "hackathon-application",
+  "userGivenName": "hackathon-application",
+  "destNamespace": "default",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/hackathon-application/overlays/tenant1",
+  "srcRepoURL": "https://github.com/h4-poc/gitops.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": {
+    "h4-poc.github.io/appcode": "esfs",
+    "h4-poc.github.io/created-by": "username",
+    "h4-poc.github.io/description": "Description1",
+    "h4-poc.github.io/tenant": "tenant1",
+    "security.external-secret.store-id": "6753b4f0-e402-415a-813e-3d617637d58e"
+  }
+}
